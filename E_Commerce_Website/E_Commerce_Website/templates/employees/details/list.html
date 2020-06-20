@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+    
+    {% block content %}
+
+    <!-- <form method="POST" action="
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="submit">
+    </form> -->
+    
+    {% for items in employee_lists %}
+    <ul>
+
+        {{items}} 
+        <a class="btn btn-secondary" href="/employee/{{items.id}}/details">Details</a>
+        <a class="btn btn-secondary" href="/employee/{{items.id}}/edit">Edit</a>
+    </ul>
+    {% endfor %}
+    <h4>Add employee:: <a class="btn btn-primary" href="/employee/add/">Add</a></h4>
+    {% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{form_user.as_p}}
+    <!-- <label for="salary">Salary:</label>
+    <input type="text" name="salary" id="salary" value="{{user.profile.salary}}">
+    <br>
+    <label for="designation">Designation:</label>
+    <input type="text" name="designation" value="{{user.profile.designation}}" id="designation"> -->
+        {{user_profile.as_p}}
+    <input type=submit value="submit">
+</form>
+
+{% endblock%}

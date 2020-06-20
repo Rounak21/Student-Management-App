@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+<h2>The answers are</h2>
+{% block content %}
+    <h3>The logged in user is {{answer.user}}</h3>
+    <h5>Choice of Answers {{answer.choice.text}}</h5> 
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+    
+    {% block content %}
+
+    <form method="POST">
+
+    </form>
+    <h3>Employee First name is {{ employee.first_name }}</h3>
+    <h4>Employee username is {{ employee.username }}</h4>
+    <h5>Employee Last Name is {{ employee.last_name }}</h5> 
+    <h6>Employee salary {{ employee.profile.salary }}</h6>
+    <h5>Employee Designation is {{ employee.profile.designation }}</h5>
+    {% endblock %}

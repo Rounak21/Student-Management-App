@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Successfully logged out</h3>
+    <form method="POST" action="{% url 'user_login' %}">
+        <input type="submit" value="Login">
+    </form>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+Details of Questions
+<br>
+
+<h4>For question {{detail.title}}</h4>
+<h3>Choices are</h3>
+
+    <ul>
+        <form action="{% url 'post-entry' %}" method="POST">
+            {% csrf_token %}
+       
+            {% for item in detail.choices %}
+            <!-- {{item.answers}} -->
+           
+            <input type="radio" name="fname" value="{{item.id}}">
+            <label for="fname">{{item.text}}</label>
+            <!-- {{item}} -->
+           
+            {% endfor %}
+            <input type="submit" value="submit">
+        </form>
+    </ul>
+    <br>
+    
+    
+    
+    <!-- <button class="button" type="submit"></button> -->
+    
+    <!-- {% for answer in item.answers %}
+        <h2>This is within answer loop</h2>
+        {{answer.user.first_name}}
+        {{answer.user.last_name}}
+        <br>
+        {{answer.choice.question.created_by.last_name}}
+    <br>
+
+    
+    
+    
+    <h2>This is outside answer loop</h2>
+
+
+Question is created by {{item.question.created_by.username}}
+<br><br>
+{{item.text}}
+<br><br>
+{% endfor %} -->
+
+
+
+
+
+{% endblock %}

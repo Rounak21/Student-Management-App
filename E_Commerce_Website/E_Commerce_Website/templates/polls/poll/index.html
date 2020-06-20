@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>The content is {{title}}</h2>
+
+<h3>The questions are as follows!!</h3>
+<!-- {% if request.user.is_staff is True %} -->
+    {% for items in questions %}
+    <a href="{% url 'post-detail' id=items.id %}">{{items}}</a>   
+       <!-- {{request}}
+       {{request.user}}
+
+       {{request.user.pk}} -->
+    {% endfor %}
+<!-- {% endif %} -->
+
+{% endblock %}
